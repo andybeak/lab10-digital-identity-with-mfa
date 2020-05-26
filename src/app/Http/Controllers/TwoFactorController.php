@@ -19,7 +19,7 @@ class TwoFactorController extends Controller
         $user = $request->user();
 
         //encrypt and then save secret
-        $user->mfa_secret = $secret;
+        $user->mfa_secret = encrypt($secret);
         $user->save();
 
         //generate image for QR barcode
