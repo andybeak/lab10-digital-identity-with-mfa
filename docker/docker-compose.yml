@@ -10,7 +10,7 @@ services:
     restart: always
     volumes:
       - '../src/:/code'
-      - './config/php/php.ini-production:/usr/local/etc/php/php.ini'
+      - './config/php/php.ini-development:/usr/local/etc/php/php.ini'
     environment:
       DB_HOST: "mysql"
       DB_PORT: 3306
